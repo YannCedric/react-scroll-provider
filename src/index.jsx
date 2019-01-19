@@ -10,14 +10,14 @@ class ScrollHeightProvider extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.listenToScroll)
+    window.addEventListener('scroll', this.listenToScroll.bind(this))
   }
   
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.listenToScroll)
+    window.removeEventListener('scroll', this.listenToScroll.bind(this))
   }
   
-  listenToScroll = () => {
+  listenToScroll () {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop
   
@@ -38,9 +38,9 @@ class ScrollHeightProvider extends Component {
 
   render() {
       return (
-      <React.Fragment>
-          {this.props.children}
-      </React.Fragment>
+        <React.Fragment>
+            {this.props.children}
+        </React.Fragment>
     );
   }
 }

@@ -1,12 +1,13 @@
 {
-  "name": "react-scroll-provider",
-  "version": "0.1.0",
-  "description": "",
+    "name": "react-scroll-provider",
+    "version": "0.1.0",
+    "description": "",
     "main": "index.js",
-    "repository":"https://github.com/YannCedric/react-hover",
+    "repository": "https://github.com/YannCedric/react-hover",
     "scripts": {
         "build": "webpack",
-        "prepublish": "webpack && git commit -a -m 'publish' && git push origin master"
+        "push": "git commit -a -m 'publish' && git push origin master",
+        "prepublish": "webpack"
     },
     "peerDependencies": {
         "prop-types": "^15.6.0",
@@ -24,7 +25,7 @@
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
         "webpack": "^4.5.0",
-        "webpack-cli": "^2.0.14"
+        "webpack-cli": "^3.2.1"
     },
     "author": "Yann Cedric Ngadeu",
     "license": "MIT"
